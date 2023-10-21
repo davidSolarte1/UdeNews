@@ -13,6 +13,10 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".SignIn"
+            android:theme="@style/AppTheme2"
+            android:exported="false" />
+        <activity
             android:name=".Main"
             android:theme="@style/UDENEWS"
             android:exported="false" />
@@ -28,7 +32,7 @@
         </activity>
         <activity
             android:name=".Login"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
