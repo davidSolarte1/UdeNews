@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF5722</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bar">#0F8513</color>
+    <color name="logbar">#05A520</color>
+    <color name="complement_bar1">#023A0B</color>
+    <color name="complement_bar2">#FF9800</color>
 </resources>

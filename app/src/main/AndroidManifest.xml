@@ -18,6 +18,7 @@
             android:exported="false" />
         <activity
             android:name=".Main"
+            android:theme="@style/UDENEWS"
             android:exported="false" />
         <activity
             android:name=".menu"
