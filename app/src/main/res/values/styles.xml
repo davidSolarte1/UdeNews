@@ -12,4 +12,15 @@
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
+    <style name="UDENEWS" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <!-- Secondary brand color. -->
+        <item name="colorPrimary">@color/bar</item>
+        <item name="colorPrimaryDark">@color/bar</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
 </resources>
+

@@ -6,4 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".Main">
 
+
+      <androidx.constraintlayout.widget.Guideline
+          android:id="@+id/verticalguide"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintGuide_percent="0.67"
+          />
+
+
+      <TextView
+          android:id="@+id/tvcabecera"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:layout_constraintWidth_percent="1"
+          app:layout_constraintHeight_percent="0.08"
+          android:gravity="center"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          android:background="@color/logbar"
+          android:text="UDENEWS"
+          android:textSize="30dp"
+          android:textAppearance="@color/white"
+          android:textStyle="italic"
+          android:textColor="@color/white">
+
+      </TextView>
+
+      <ImageView
+          android:layout_marginBottom="0dp"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:layout_constraintHeight_percent="0.08"
+          app:layout_constraintWidth_percent="0.2"
+          android:src="@drawable/escudo_udenar"
+          app:tint="@color/white"
+          app:layout_constraintTop_toTopOf="@id/tvcabecera"
+          app:layout_constraintStart_toStartOf="@id/tvcabecera"
+          />
+
+      <TextView
+          android:id="@+id/tvcabeceraComplement1"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:layout_constraintWidth_percent="0.4"
+          app:layout_constraintHeight_percent="0.01"
+          app:layout_constraintTop_toBottomOf="@id/tvcabecera"
+          app:layout_constraintStart_toStartOf="parent"
+          android:background="@color/complement_bar1"
+            >
+      </TextView>
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:layout_constraintWidth_percent="0.6"
+          app:layout_constraintHeight_percent="0.01"
+          app:layout_constraintStart_toEndOf="@id/tvcabeceraComplement1"
+          app:layout_constraintTop_toBottomOf="@id/tvcabecera"
+          android:background="@color/complement_bar2"
+      ></TextView>
+
+      <Button
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:layout_constraintWidth_percent="0.1"
+          app:layout_constraintHeight_percent="0.08"
+          app:layout_constraintEnd_toEndOf="@id/tvcabecera"
+          app:layout_constraintTop_toTopOf="@id/tvcabecera"
+          android:background="@drawable/menu"
+          ></Button>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
