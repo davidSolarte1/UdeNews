@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "298291824153",
+    "project_id": "udenews-d02e8",
+    "storage_bucket": "udenews-d02e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298291824153:android:0e1f380e9442be25b64c88",
+        "android_client_info": {
+          "package_name": "com.example.udenews"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBecZbGDCHRIz9CMY_vFhoX7uBNnT8HQhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
