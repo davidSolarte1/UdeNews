@@ -60,10 +60,9 @@ class Login : AppCompatActivity() {
 
             }
         }
-
     }
     private fun reload(){
-        val intent = Intent(this, Main::class.java)
+        val intent = Intent(this, Admin::class.java)
         this.startActivity(intent)
     }
 }

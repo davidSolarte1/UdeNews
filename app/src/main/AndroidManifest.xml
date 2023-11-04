@@ -13,13 +13,16 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".SignIn"
-            android:theme="@style/AppTheme2"
+            android:name=".Admin"
             android:exported="false" />
         <activity
+            android:name=".SignIn"
+            android:exported="false"
+            android:theme="@style/AppTheme2" />
+        <activity
             android:name=".Main"
-            android:theme="@style/AppTheme"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".menu"
             android:exported="true"
