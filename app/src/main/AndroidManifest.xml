@@ -10,37 +10,29 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UdeNews"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.UdeNews" />
+            android:name=".SignIn"
+            android:theme="@style/AppTheme2"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.UdeNews" />
+            android:name=".Main"
+            android:theme="@style/AppTheme2"
+            android:exported="false" />
         <activity
-            android:name=".PrincipalView"
-            android:exported="false"
-            android:label="@string/title_activity_principal_view"
-            android:theme="@style/Theme.UdeNews" />
-        <activity
-            android:name=".Principal_view"
-            android:exported="false"
-            android:label="@string/title_activity_principal_view"
-            android:theme="@style/Theme.UdeNews" />
-        <activity
-            android:name=".Login"
-            android:exported="true">
+            android:name=".menu"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Login"
+            android:exported="false" />
     </application>
 
 </manifest>
