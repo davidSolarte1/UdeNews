@@ -1,9 +1,10 @@
-package com.example.udenews
+package com.example.udenews.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.udenews.adapter.NewsViewHolder
+import com.example.udenews.News
+import com.example.udenews.R
 
 class NewsAdapter(private val newsList: List<News>) : RecyclerView.Adapter<NewsViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
