@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">UdeNews</string>
+    <string name="Itabout">Acerca de</string>
 
     <string-array name="programs">
 
@@ -43,6 +44,7 @@
         <item>Sociología</item>
         <item>Tecnología en Promoción de la Salud</item>
         <item>Zootecnia</item>
+
 
     </string-array>
 </resources>
