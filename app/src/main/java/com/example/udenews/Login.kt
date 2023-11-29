@@ -29,11 +29,16 @@ class Login : AppCompatActivity() {
             val email = binding.etUser.text.toString()
             val password = binding.etPassword.text.toString()
             if (email.isEmpty() || password.isEmpty()){
-                Toast.makeText(baseContext, "Complete todos los campos", Toast.LENGTH_SHORT,).show()
+                Toast.makeText(baseContext, "Complete todos los campos", Toast.LENGTH_SHORT).show()
             }
             else{
                 LogIn(email, password)
             }
+        }
+
+        binding.btnSignIn.setOnClickListener {
+            val intent = Intent(this, SignIn::class.java)
+            this.startActivity(intent)
         }
     }
 
