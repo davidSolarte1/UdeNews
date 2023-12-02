@@ -6,11 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.udenews.News
 import com.example.udenews.R
 
-class NewsAdapter(private val newsList: List<News>) : RecyclerView.Adapter<NewsViewHolder>(){
+class NewsAdapter(private val newsList: List<News>, private val onClickListener: (News) -> Unit,
+    private val onclickDeleted:(Int) -> Unit) :
+    RecyclerView.Adapter<NewsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
 
         val layoutInflater = LayoutInflater.from(parent.context)
-        return NewsViewHolder(layoutInflater.inflate(R.layout.item_news, parent,false))
+        return NewsViewHolder(layoutInflater.inflate(R.layout.item_news, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -22,6 +24,6 @@ class NewsAdapter(private val newsList: List<News>) : RecyclerView.Adapter<NewsV
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
 
         val item = newsList[position]
-        holder.reder(item)
+        holder.reder(item, onClickListener, onclickDeleted)
     }
 }
