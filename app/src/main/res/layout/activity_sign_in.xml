@@ -7,34 +7,20 @@
     tools:context=".SignIn">
 
 
-    <ImageView
-        android:id="@+id/ivUdenar"
-        android:layout_width="wrap_content"
-        android:layout_height="226dp"
-        android:layout_marginBottom="266dp"
-        android:scaleType="fitStart"
-        android:src="@drawable/udenar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
-
     <EditText
         android:id="@+id/etId"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivUdenar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="472dp"
         android:background="@drawable/edittext_border"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintWidth_percent="0.7"
-        android:inputType="number"
         android:hint="Código estudiantil"
-        />
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
     <EditText
         android:id="@+id/etName"
         android:layout_width="0dp"
@@ -129,7 +115,13 @@
         android:text="Registrarme"
         />
 
-
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="396dp"
+        android:layout_height="207dp"
+        app:srcCompat="@drawable/logooo32"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="2dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
