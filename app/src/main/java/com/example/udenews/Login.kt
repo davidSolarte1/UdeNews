@@ -55,6 +55,7 @@ class Login : AppCompatActivity() {
             if (task.isSuccessful) {
                 Log.d("TAG", "signInWithEmail:success")
                 reload()
+                finish()
 
             } else {
                 Log.w("TAG", "signInWithEmail:failure", task.exception)

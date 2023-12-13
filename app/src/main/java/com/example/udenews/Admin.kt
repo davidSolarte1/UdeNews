@@ -20,6 +20,7 @@ class Admin : AppCompatActivity() {
         auth = Firebase.auth
         binding.btnLogOut.setOnClickListener {
             signOut()
+            finish()
         }
 
     }
