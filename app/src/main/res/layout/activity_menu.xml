@@ -30,4 +30,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="main"
         />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="298dp"
+        android:layout_height="360dp"
+        app:srcCompat="@drawable/login"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="-46dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="252dp"
+        android:layout_height="277dp"
+        app:srcCompat="@drawable/logopruebaa"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="462dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
