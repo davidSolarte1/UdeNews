@@ -6,16 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".Admin">
 
-    <Button
-        android:id="@+id/btnLogOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/tvcabecera"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintHeight_percent="0.08"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/logbar"
+        android:text="UDENEWS"
+        android:textSize="30dp"
+        android:textAppearance="@color/white"
+        android:textStyle="italic"
+        android:textColor="@color/white">
+
+    </TextView>
+
+    <ImageView
+        android:layout_marginBottom="0dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintWidth_percent="0.2"
+        android:src="@drawable/escudo_udenar"
+        app:tint="@color/white"
+        app:layout_constraintTop_toTopOf="@id/tvcabecera"
+        app:layout_constraintStart_toStartOf="@id/tvcabecera"
+        />
+
+    <TextView
+        android:id="@+id/tvcabeceraComplement1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintTop_toBottomOf="@id/tvcabecera"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/complement_bar1"
+        />
+
+    <TextView
+        android:id="@+id/tvcabeceraComplement2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintStart_toEndOf="@id/tvcabeceraComplement1"
+        app:layout_constraintTop_toBottomOf="@id/tvcabecera"
+        android:background="@color/complement_bar2"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNews"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tvcabeceraComplement2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnAddNew"
+        app:layout_constraintHeight_percent="0.8"
+        />
+    <Button
+        android:id="@+id/btnAddNew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rvNews"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintHorizontal_bias="0.2"
+        android:text="Agregar Noticia"
+
+        />
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rvNews"
+        app:layout_constraintStart_toEndOf="@id/btnAddNew"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.35"
         android:text="Cerrar sesion"
 
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

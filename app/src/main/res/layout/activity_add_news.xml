@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNews">
+
+
+    <TextView
+        android:id="@+id/tvcabecera"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintHeight_percent="0.08"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/logbar"
+        android:text="UDENEWS"
+        android:textSize="30dp"
+        android:textAppearance="@color/white"
+        android:textStyle="italic"
+        android:textColor="@color/white">
+
+    </TextView>
+
+    <ImageView
+        android:layout_marginBottom="0dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintWidth_percent="0.2"
+        android:src="@drawable/escudo_udenar"
+        app:tint="@color/white"
+        app:layout_constraintTop_toTopOf="@id/tvcabecera"
+        app:layout_constraintStart_toStartOf="@id/tvcabecera"
+        />
+
+    <TextView
+        android:id="@+id/tvcabeceraComplement1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintTop_toBottomOf="@id/tvcabecera"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/complement_bar1"
+        />
+
+    <TextView
+        android:id="@+id/tvcabeceraComplement2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintStart_toEndOf="@id/tvcabeceraComplement1"
+        app:layout_constraintTop_toBottomOf="@id/tvcabecera"
+        android:background="@color/complement_bar2"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.7"
+        android:background="@drawable/view_border"
+
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/etTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:text="Crea tu noticia"
+                />
+
+
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="Titulo"
+                app:layout_constraintVertical_bias="0.2"
+                app:layout_constraintWidth_percent="0.9" />
+
+
+            <Button
+                android:id="@+id/bntImage"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etTitle"
+                android:hint="Carga una imagen"
+                app:layout_constraintVertical_bias="0.08"
+                app:layout_constraintWidth_percent="0.9"
+                android:backgroundTint="#DD0FAF0F"/>
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:inputType="date"
+                app:layout_constraintTop_toBottomOf="@+id/bntImage"
+                android:hint="Fecha del evento"
+                app:layout_constraintVertical_bias="0.1"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <EditText
+                android:id="@+id/etPlace"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etDate"
+                android:hint="Lugar del evento"
+                app:layout_constraintVertical_bias="0.12"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <Button
+                android:id="@+id/bntAdd"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/etPlace"
+                app:layout_constraintTop_toBottomOf="@+id/etPlace"
+                android:hint="Añadir"
+                app:layout_constraintVertical_bias="0.4"
+                app:layout_constraintWidth_percent="0.4"
+                android:backgroundTint="#DD0FAF0F"/>
+
+            <Button
+                android:id="@+id/bntCancel"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/etPlace"
+                app:layout_constraintTop_toBottomOf="@+id/etPlace"
+                android:hint="Cancelar"
+                app:layout_constraintVertical_bias="0.4"
+                app:layout_constraintWidth_percent="0.4"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,13 +7,7 @@
     tools:context=".Main">
 
 
-      <androidx.constraintlayout.widget.Guideline
-          android:id="@+id/verticalguide"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:orientation="vertical"
-          app:layout_constraintGuide_percent="0.67"
-          />
+
 
 
       <TextView
@@ -70,22 +64,17 @@
       ></TextView>
 
 
-<FrameLayout
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    app:layout_constraintTop_toBottomOf="@id/tvcabeceraComplement2"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent">
-
       <androidx.recyclerview.widget.RecyclerView
-          android:id="@+id/Reciclenews"
+          android:id="@+id/rvNews"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content">
+          android:layout_height="0dp"
+          tools:layout_editor_absoluteX="1dp"
+          tools:layout_editor_absoluteY="1dp"
+          app:layout_constraintTop_toBottomOf="@id/tvcabeceraComplement2"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
 
-      </androidx.recyclerview.widget.RecyclerView>
-
-</FrameLayout>
-
+          />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
