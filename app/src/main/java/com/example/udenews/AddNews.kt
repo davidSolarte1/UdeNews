@@ -4,6 +4,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.ImageButton
@@ -26,6 +27,11 @@ class AddNews : AppCompatActivity() {
         etDate=findViewById(R.id.etDate)
         btnCalendar=findViewById(R.id.btnCalendar)
         dpDate=findViewById(R.id.dpDate)
+
+        val btnCancel = findViewById<Button>(R.id.bntCancel)
+        btnCancel.setOnClickListener {
+            finish()
+        }
 
 
         etDate?.setText(getDatePicker())
