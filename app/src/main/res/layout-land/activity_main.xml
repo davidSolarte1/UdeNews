@@ -65,28 +65,16 @@
       ></TextView>
 
 
-      <FrameLayout
-          android:id="@+id/frame_layout_main"
-          android:layout_width="0dp"
-          android:layout_height="0dp"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/tvcabeceraComplement2"
-          app:layout_constraintBottom_toTopOf="@id/botton_navigation_Main">
-
-      </FrameLayout>
-
-      <com.google.android.material.bottomnavigation.BottomNavigationView
-          android:id="@+id/botton_navigation_Main"
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rvNews"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          app:layout_constraintStart_toStartOf="parent"
+          android:layout_height="0dp"
           app:layout_constraintBottom_toBottomOf="parent"
-          style="@style/BottomNavigation"
-          app:menu="@menu/menu_main2"
-          >
-      </com.google.android.material.bottomnavigation.BottomNavigationView>
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
 
-
+          app:layout_constraintTop_toBottomOf="@id/tvcabeceraComplement2"
+          app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

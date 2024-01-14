@@ -9,4 +9,9 @@
     <color name="complement_bar1">#023A0B</color>
     <color name="complement_bar2">#FF9800</color>
     <color name="background">#F0F2F5</color>
+
+    <color name="green_dark">#062925</color>
+    <color name="green_normal">#044a42</color>
+    <color name="green_light">#3a9188</color>
+    <color name="green_light_2">#b8e1dd</color>
 </resources>

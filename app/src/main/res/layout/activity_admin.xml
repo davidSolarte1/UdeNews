@@ -7,6 +7,8 @@
     android:background="@color/background"
     tools:context=".Admin">
 
+
+
     <TextView
         android:id="@+id/tvcabecera"
         android:layout_width="0dp"
@@ -17,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/logbar"
-        android:text="UDENEWS"
+        android:text="UDNEWS"
         android:textSize="30dp"
         android:textAppearance="@color/white"
         android:textStyle="italic"
@@ -59,43 +61,28 @@
         android:background="@color/complement_bar2"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvNews"
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvcabeceraComplement2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btnAddNew"
-        app:layout_constraintHeight_percent="0.8"
-        />
-    <Button
-        android:id="@+id/btnAddNew"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/rvNews"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintWidth_percent="0.35"
-        app:layout_constraintHorizontal_bias="0.2"
-        android:text="Agregar Noticia"
+        app:layout_constraintBottom_toTopOf="@id/botton_navigation">
 
-        />
-    <Button
-        android:id="@+id/btnLogOut"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/rvNews"
-        app:layout_constraintStart_toEndOf="@id/btnAddNew"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintWidth_percent="0.35"
-        android:text="Cerrar sesion"
+    </FrameLayout>
 
-        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botton_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/BottomNavigation"
+        app:menu="@menu/menu_main"
+        >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
