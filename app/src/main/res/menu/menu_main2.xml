@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home">
+    </item>
+
+    <item
+        android:id="@+id/Map"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="Map">
+    </item>
+    <item
+        android:id="@+id/out"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="Out">
+    </item>
+
+
+</menu>
