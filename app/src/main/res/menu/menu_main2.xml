@@ -5,11 +5,7 @@
         android:icon="@drawable/baseline_home_24"
         android:title="Home">
     </item>
-    <item
-        android:id="@+id/addnew"
-        android:icon="@android:drawable/ic_input_add"
-        android:title="Add">
-    </item>
+
     <item
         android:id="@+id/Map"
         android:icon="@android:drawable/ic_dialog_map"

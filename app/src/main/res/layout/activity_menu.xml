@@ -37,7 +37,11 @@
         android:layout_height="360dp"
         app:srcCompat="@drawable/login"
         tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="-46dp" />
+        tools:layout_editor_absoluteY="-46dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -45,5 +49,9 @@
         android:layout_height="277dp"
         app:srcCompat="@drawable/logopruebaa"
         tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="462dp" />
+        tools:layout_editor_absoluteY="462dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
