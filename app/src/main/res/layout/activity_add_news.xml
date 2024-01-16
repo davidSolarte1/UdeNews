@@ -72,12 +72,11 @@
         app:layout_constraintHeight_percent="0.7"
         android:background="@drawable/view_border"
 
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            xmlns:android="http://schemas.android.com/apk/res/android">
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -149,12 +148,11 @@
                 android:id="@+id/btnCalendar"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                app:layout_constraintStart_toEndOf="@id/etDate"
-                app:layout_constraintTop_toTopOf="@+id/etDate"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.4"
                 android:src="@drawable/calendar"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.42"
+                app:layout_constraintStart_toEndOf="@id/etDate"
+                app:layout_constraintTop_toTopOf="@+id/etDate" />
 
             <EditText
                 android:id="@+id/etPlace"
