@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.udenews.R
 import com.example.udenews.adapter.NewsAdapter
@@ -36,6 +37,10 @@ class home : Fragment() {
         recyclerView = view.findViewById(R.id.rvNews_main)
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 1)
 
+        val layoutManager = LinearLayoutManager(requireContext())
+        layoutManager.reverseLayout = true
+        layoutManager.stackFromEnd = true
+        recyclerView.layoutManager = layoutManager
         showNews()
 
         return view
