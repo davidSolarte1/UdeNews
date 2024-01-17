@@ -83,8 +83,8 @@ class Main : AppCompatActivity() {
     private fun showAlertDialog() {
         val alertDialogBuilder = AlertDialog.Builder(this)
 
-        alertDialogBuilder.setTitle("Integrantes")
-        alertDialogBuilder.setMessage("David\nBrayan\nValeria")
+        alertDialogBuilder.setTitle("Desarrollada por:")
+        alertDialogBuilder.setMessage("David Solarte\nBrayan Piandoy\nValeria Miramag")
 
 
         // Configurar el botón positivo
