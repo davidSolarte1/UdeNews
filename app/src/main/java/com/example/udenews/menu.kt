@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 
 class menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +14,7 @@ class menu : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
 
         val btnLogin = findViewById<Button>(R.id.login)
-        val btnMain = findViewById<Button>(R.id.main)
+        val btnMain = findViewById<TextView>(R.id.guest)
 
         btnLogin.setOnClickListener {
             val intent = Intent(this, Login::class.java)

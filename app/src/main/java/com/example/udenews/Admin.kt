@@ -2,12 +2,14 @@ package com.example.udenews
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.udenews.databinding.ActivityAdminBinding
+import com.example.udenews.fragments.Add_news
 import com.example.udenews.fragments.Map_fragment
 import com.example.udenews.fragments.admin_fragment
 import com.google.firebase.Firebase
@@ -46,7 +48,7 @@ class Admin : AppCompatActivity() {
             when (it.itemId){
                 R.id.home -> changefragment(admin_fragment())
                 R.id.Map -> changefragment(Map_fragment())
-                R.id.addnew -> changeActivity(this,AddNews::class.java)
+                R.id.addnew -> openLinkInBrowser("http://192.168.1.2:8000/")
                 R.id.out -> signOut()
 
                 else ->{
@@ -71,7 +73,10 @@ class Admin : AppCompatActivity() {
         fragmentTransaction.commit()
 
     }
-
+    private fun openLinkInBrowser(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
+    }
 
     fun changeActivity(context: Context, targetActivity: Class<*>) {
         val intent = Intent(context, targetActivity)
