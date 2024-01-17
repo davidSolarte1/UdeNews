@@ -19,13 +19,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/logbar"
-        android:text="UDNEWS"
+        android:text="UDENEWS"
         android:textSize="30dp"
         android:textAppearance="@color/white"
         android:textStyle="italic"
         android:textColor="@color/white">
 
+
     </TextView>
+
+    <Button
+        android:id="@+id/btn_Acerca"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.08"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/btn_acerca"
+        android:text="?"
+        android:textColor="@color/white"
+
+        ></Button>
 
     <ImageView
         android:layout_marginBottom="0dp"

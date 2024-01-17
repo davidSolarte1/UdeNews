@@ -4,6 +4,8 @@ package com.example.udenews
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.udenews.databinding.ActivityMainBinding
@@ -27,14 +29,15 @@ class Main : AppCompatActivity() {
         setContentView(binding.root)
         auth = Firebase.auth
 
-        //recyclerView=findViewById(R.id.rvNews)
-        //recyclerView.layoutManager = GridLayoutManager(applicationContext, 1)
+        val btnAcerca: Button = findViewById(R.id.btn_AcercaMain)
+
+        btnAcerca.setOnClickListener {
+            showAlertDialog()
+        }
 
 
         changefragment(home())
-        //showNews()
 
-        //signOut()
         binding.bottonNavigationMain?.setOnNavigationItemSelectedListener {
 
             when (it.itemId){
@@ -68,24 +71,7 @@ class Main : AppCompatActivity() {
         fragmentTransaction.commit()
 
     }
-    //private fun showNews(){
-      //  val retrofitGet = ApiClient.consApi.getNews()
-       // retrofitGet.enqueue(object : Callback<List<News>> {
-         //   override fun onResponse(call: Call<List<News>>, response: Response<List<News>>) {
-           //     if (response.isSuccessful){
-             //       news = response.body()!!
-               //     newsAdapter = NewsAdapter(news,applicationContext)
-                 //   recyclerView.adapter= newsAdapter
-               // }
-           // }
 
-          //  override fun onFailure(call: Call<List<News>>, t: Throwable) {
-           //     Toast.makeText(baseContext , "Error de conexion", Toast.LENGTH_SHORT).show()
-           // }
-
-
-       // })
-   // }
     private fun signOut() {
         Firebase.auth.signOut()
         val intent = Intent(this, Login::class.java)
@@ -93,6 +79,23 @@ class Main : AppCompatActivity() {
 
         finish()
 
+    }
+
+    private fun showAlertDialog() {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+
+        alertDialogBuilder.setTitle("Integrantes")
+        alertDialogBuilder.setMessage("David\nBrayan\nValeria")
+
+
+        // Configurar el botón positivo
+        alertDialogBuilder.setPositiveButton("Aceptar") { _, _ ->
+
+        }
+
+        // Mostrar el diálogo
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
     }
 
 
