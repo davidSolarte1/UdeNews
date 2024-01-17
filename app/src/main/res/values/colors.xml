@@ -9,6 +9,7 @@
     <color name="complement_bar1">#023A0B</color>
     <color name="complement_bar2">#FF9800</color>
     <color name="background">#F0F2F5</color>
+    <color name="routeColor">#FA001D</color>
 
     <color name="green_dark">#062925</color>
     <color name="green_normal">#044a42</color>

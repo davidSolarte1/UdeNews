@@ -2,10 +2,14 @@ package com.example.udenews
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.udenews.databinding.ActivityAdminBinding
+import com.example.udenews.fragments.Add_news
 import com.example.udenews.fragments.Map_fragment
 import com.example.udenews.fragments.admin_fragment
 import com.google.firebase.Firebase
@@ -30,19 +34,21 @@ class Admin : AppCompatActivity() {
         auth = Firebase.auth
 
 
-        //recyclerView=findViewById(R.id.rvNews)
-        //recyclerView.layoutManager = GridLayoutManager(applicationContext, 1)
+        val btnAcerca: Button = findViewById(R.id.btn_Acerca)
+
+        btnAcerca.setOnClickListener {
+            showAlertDialog()
+        }
+
 
         changefragment(admin_fragment())
-        //showNews()
-
 
         binding.bottonNavigation.setOnNavigationItemSelectedListener {
 
             when (it.itemId){
                 R.id.home -> changefragment(admin_fragment())
                 R.id.Map -> changefragment(Map_fragment())
-                R.id.addnew -> changeActivity(this,AddNews::class.java)
+                R.id.addnew -> openLinkInBrowser("http://192.168.1.2:8000/")
                 R.id.out -> signOut()
 
                 else ->{
@@ -55,6 +61,8 @@ class Admin : AppCompatActivity() {
         }
 
 
+
+
     }
 
     private fun changefragment(fragment: Fragment) {
@@ -65,38 +73,39 @@ class Admin : AppCompatActivity() {
         fragmentTransaction.commit()
 
     }
-
+    private fun openLinkInBrowser(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
+    }
 
     fun changeActivity(context: Context, targetActivity: Class<*>) {
         val intent = Intent(context, targetActivity)
         context.startActivity(intent)
     }
 
-
-    //private fun showNews(){
-       // val retrofitGet = ApiClient.consApi.getNews()
-        //retrofitGet.enqueue(object : Callback<List<News>>{
-          //  override fun onResponse(call: Call<List<News>>, response: Response<List<News>>) {
-             //   if (response.isSuccessful){
-                //    news = response.body()!!
-                  //  newsAdapter = NewsAdapter(news,applicationContext)
-                  //  recyclerView.adapter= newsAdapter
-               // }
-            //}
-
-          //  override fun onFailure(call: Call<List<News>>, t: Throwable) {
-         //       Toast.makeText(baseContext , "Error de conexion", Toast.LENGTH_SHORT).show()
-         //   }
-
-
-        //})
-    //}
     private fun signOut(){
         Firebase.auth.signOut()
         val intent = Intent(this, Login::class.java)
         startActivity(intent)
 
         finish()
+    }
+
+    private fun showAlertDialog() {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+
+        alertDialogBuilder.setTitle("Desarrollada por:")
+        alertDialogBuilder.setMessage("David Solarte\nBrayan Piandoy\nValeria Miramag")
+
+
+        // Configurar el botón positivo
+        alertDialogBuilder.setPositiveButton("Aceptar") { _, _ ->
+
+        }
+
+        // Mostrar el diálogo
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
     }
 
 
